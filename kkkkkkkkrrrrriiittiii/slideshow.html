@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<title>W3.CSS</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<style>
+.mySlides {display:none;}
+</style>
+<body>
+
+<div class="w3-content w3-section" style="max-width:500px">
+  <img class="mySlides w3-animate-top" src="https://images8.alphacoders.com/893/893987.jpg" style="width:100%">
+  <img class="mySlides w3-animate-bottom" src="https://img.wonderhowto.com/img/36/76/63586988299666/0/lose-weight-with-smoothies-shakes.1280x600.jpg" style="width:100%">
+  <img class="mySlides w3-animate-top" src="https://i0.wp.com/media.hungryforever.com/wp-content/uploads/2015/12/09123602/ConPomodoroEBasilico151-e1449644777265.jpg?resize=600%2C387&ssl=1" style="width:100%">
+  <img class="mySlides w3-animate-bottom" src="https://demo.webcodemonster.com/wordpress/wcmwp008/wp-content/uploads/2017/05/product1-1.jpg" style="width:100%">
+</div>
+
+<script>
+var myIndex = 0;
+carousel();
+
+function carousel() {
+  var i;
+  var x = document.getElementsByClassName("mySlides");
+  for (i = 0; i < x.length; i++) {
+    x[i].style.display = "none";  
+  }
+  myIndex++;
+  if (myIndex > x.length) {myIndex = 1}    
+  x[myIndex-1].style.display = "block";  
+  setTimeout(carousel, 2500);    
+}
+</script>
+
+</body>
+</html>
